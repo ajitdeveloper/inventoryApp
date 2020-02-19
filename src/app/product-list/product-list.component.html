@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row">
+<product-card  *ngFor = "let myProduct of productList"
+ (click)="onclicked(myProduct)"
+ [product] = "myProduct"
+ (class.selected) = "isSelected(myProduct)">
+</product-card>
+</div>
+</div>

@@ -22,11 +22,27 @@ export class ProductListComponent implements OnInit {
 
  @Output() onProductSelect:EventEmitter<ProductModel>;
 
+  private currentProduct:ProductModel;
+
   constructor() { 
-    
+    // The initialization of the emitter is done in contructor
+    this.onProductSelect = new EventEmitter();
   }
   ngOnInit() {
+  
     
+  }
+
+  onclicked(product:ProductModel){
+    this.currentProduct = product;
+    this.onProductSelect.emit(product);
+  }
+
+  isSelected(product:ProductModel):boolean{
+    if(!product|| !this.currentProduct){
+      return false;
+    }
+    product.sku == this.currentProduct.sku;
   }
 
 }
