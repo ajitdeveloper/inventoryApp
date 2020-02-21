@@ -8,6 +8,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductImgComponent } from './product-img/product-img.component';
 import { ProductDepartmentComponent } from './product-department/product-department.component';
 import { ProductPriceComponent } from './product-price/product-price.component';
+import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ProductPriceComponent } from './product-price/product-price.component';
     ProductCardComponent,
     ProductImgComponent,
     ProductDepartmentComponent,
-    ProductPriceComponent
+    ProductPriceComponent,
+    ProductDescriptionComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

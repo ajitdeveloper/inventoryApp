@@ -1,5 +1,8 @@
 import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 import { ProductModel } from '../product-model';
+import { Router } from '@angular/router';
+import { SharingProductService } from '../sharing-product.service';
+
 
 @Component({
   selector: 'app-product-list',
@@ -24,7 +27,7 @@ export class ProductListComponent implements OnInit {
 
   private currentProduct:ProductModel;
 
-  constructor() { 
+  constructor(private router : Router, private sharingProduct:SharingProductService) { 
     // The initialization of the emitter is done in contructor
     this.onProductSelect = new EventEmitter();
   }
@@ -36,6 +39,7 @@ export class ProductListComponent implements OnInit {
   onclicked(product:ProductModel){
     this.currentProduct = product;
     this.onProductSelect.emit(product);
+    this.router.navigate(['/dashboard', product.sku]);
   }
 
   isSelected(product:ProductModel):boolean{
