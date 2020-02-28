@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Person } from '../person';
+
 
 @Component({
   selector: 'app-person-table',
@@ -9,12 +10,21 @@ import { Person } from '../person';
 export class PersonTableComponent implements OnInit {
 
   @Input() listPerson:Person[];
-  constructor() { }
+
+  @Output() addedPerson:EventEmitter<Person>;
+  constructor() { 
+    this.addedPerson = new EventEmitter<Person>();
+  }
 
   ngOnInit() {
     console.log(this.listPerson);
   }
 
+
+  personWasAdded(event:Person){
+    console.log(event);
+    this.addedPerson.emit(event);
+  }
 
 
   delete(event,i:number){

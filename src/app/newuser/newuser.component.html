@@ -12,26 +12,22 @@
       </div>
       <div class="modal-body mx-3">
        <div class="md-form mb-5">
-        
-          <input type="text" id="defaultForm-email" name="username" value="username" [(ngModel)]="username" class="form-control validate" placeholder="User Name">
+          <input type="text" id="defaultForm-email" name="userName" [(ngModel)]="userName" class="form-control validate" placeholder="User Name">
           <label data-error="wrong" data-success="right" for="defaultForm-email"></label>
       </div> 
-
         <div class="md-form mb-4">
-          
           <input type="text" id="defaultForm-pass" name="role"  class="form-control validate" [(ngModel)]="role" placeholder="Role">
           <label data-error="wrong" data-success="right" for="defaultForm-pass"></label>
         </div>
-
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button type="submit" class="btn btn-success">Add</button>
+        <button type="submit" id="btnTest"  (click)="close()"  class="btn btn-success">Add</button>
       </div>
     </div>
   </div>
-
 </form>
 
+
 <div class="text-center">
-  <a href="#" id="addUser" class="btn btn-success btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">+ Add User</a>
+  <a href='' id="addUser"  class="btn btn-success btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">+ Add User</a>
 </div>

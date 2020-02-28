@@ -18,6 +18,17 @@ export class AdminComponent implements OnInit {
     ]  
   }
 
+/*
+* The added user is being pushed to list of array of person 
+*/
+  newPerson(event:Person){
+    if(event.userName!=undefined && event.role!=undefined){
+      if(!this.personArray.includes(event)){
+        this.personArray.push(event);
+      }
+    }
+  }
+
   ngOnInit() {
   }
 
