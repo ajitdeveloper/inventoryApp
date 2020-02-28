@@ -1,0 +1,26 @@
+
+<div class="container">
+  <app-newuser></app-newuser>
+  
+    <h2>List of Users</h2>
+    
+    <table class="table" >
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Role</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tbody " *ngFor="let person of listPerson; let i=index">
+        <tr id="i"  (click)="delete($event,i)" >
+          <td>{{person.userName}}</td>
+          <td>{{person.role}}</td>
+          <td><button type="button"  id="delete"  class="btn btn-danger">Delete</button></td>
+          <td><button type="button" class="btn btn-info">Update Role</button></td>
+        </tr>
+     </tbody>
+    </table>
+  </div>
+  

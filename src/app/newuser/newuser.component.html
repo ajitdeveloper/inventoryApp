@@ -1,0 +1,37 @@
+
+<form #addUser="ngForm"  class="modal fade" id="modalLoginForm" tabindex="-1"  role="dialog" (ngSubmit)="onAddUser(addUser.value)" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Add New User</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+       <div class="md-form mb-5">
+        
+          <input type="text" id="defaultForm-email" name="username" value="username" [(ngModel)]="username" class="form-control validate" placeholder="User Name">
+          <label data-error="wrong" data-success="right" for="defaultForm-email"></label>
+      </div> 
+
+        <div class="md-form mb-4">
+          
+          <input type="text" id="defaultForm-pass" name="role"  class="form-control validate" [(ngModel)]="role" placeholder="Role">
+          <label data-error="wrong" data-success="right" for="defaultForm-pass"></label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="submit" class="btn btn-success">Add</button>
+      </div>
+    </div>
+  </div>
+
+</form>
+
+<div class="text-center">
+  <a href="#" id="addUser" class="btn btn-success btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">+ Add User</a>
+</div>

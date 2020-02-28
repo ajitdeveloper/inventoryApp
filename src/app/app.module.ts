@@ -10,6 +10,11 @@ import { ProductDepartmentComponent } from './product-department/product-departm
 import { ProductPriceComponent } from './product-price/product-price.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminComponent } from './admin/admin.component';
+import { UsersComponent } from './users/users.component';
+import { PersonTableComponent } from './person-table/person-table.component';
+import { NewuserComponent } from './newuser/newuser.component';
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -20,9 +25,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ProductDepartmentComponent,
     ProductPriceComponent,
     ProductDescriptionComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdminComponent,
+    UsersComponent,
+    PersonTableComponent,
+    NewuserComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],
